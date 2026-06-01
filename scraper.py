@@ -8,8 +8,8 @@ from datetime import datetime
 from playwright.async_api import async_playwright
 
 # ── Config ──────────────────────────────────────────────────────────────────
-PHONE = os.environ["WHATSAPP_PHONE"]          # e.g. +521234567890
-CALLMEBOT_APIKEY = os.environ["CALLMEBOT_APIKEY"]
+PHONE = os.environ.get("WHATSAPP_PHONE", "+598369464")
+CALLMEBOT_APIKEY = os.environ.get("CALLMEBOT_APIKEY", "4727968")
 POLL_SECONDS = int(os.environ.get("POLL_SECONDS", "1800"))  # default 30 min
 URL = "https://labs.scale.com/leaderboard/humanitys_last_exam"
 
